@@ -1,3 +1,5 @@
+package transactions;
+
 import java.time.LocalDate;
 
 public class Transaction {
