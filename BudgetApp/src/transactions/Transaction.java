@@ -2,7 +2,7 @@ package transactions;
 
 import java.time.LocalDate;
 
-public class Transaction {
+public class Transaction implements Comparable<Transaction> {
 
     private Payee payee;
     private LocalDate date;
@@ -14,4 +14,8 @@ public class Transaction {
         this.amount = amount;
     }
 
+    @Override
+    public int compareTo(Transaction o) {
+        return 0;
+    }
 }

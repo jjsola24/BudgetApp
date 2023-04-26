@@ -1,5 +1,9 @@
+import app.BudgetApp;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        BudgetApp app = new BudgetApp();
+
+        app.run();
     }
 }
