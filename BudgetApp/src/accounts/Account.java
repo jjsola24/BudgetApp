@@ -42,4 +42,16 @@ public abstract class Account {
             return true;
         }
     }
+
+
+    public void addTransaction(Transaction transaction) {
+        transactions.add(transaction);
+    }
+
+    public void printTransactions() {
+        for (Transaction transaction : transactions) {
+            System.out.println(transaction);
+        }
+    }
+
 }

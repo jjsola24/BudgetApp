@@ -2,21 +2,28 @@ package app;
 
 
 import budgets.Budget;
+import com.menu.*;
+import com.menu.Menu;
 
 import java.util.*;
 
 public class BudgetApp {
 
     private Map<String,Budget> budgets;
+    private Budget budget;
     private Scanner scanner;
+
+    private Menu menu;
 
     public BudgetApp() {
         budgets = new HashMap<>();
         scanner = new Scanner(System.in);
+        budget = new Budget("Main");
     }
     public void run() {
         while (true) {
-            printMenu("main");
+            menu = new MainMenu();
+            menu.showMenu();
             int option = scanner.nextInt();
             if (option >4 || option < 1) {
                 throw new IllegalArgumentException("Invalid option");
@@ -101,5 +108,8 @@ public class BudgetApp {
         }
         return workingBudget;
     }
+
+    //TODO
+
 }
 
